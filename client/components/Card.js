@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 class Card extends Component {
   render () {
     const { card: { image, name } } = this.props;
 
+    const file = require(`../${image}`);
+
     return (
       <div>
         <div className="card__face">
-          <img 
-            src={ image } 
-            title={ name } 
-            alt={ name } />
+        <g dangerouslySetInnerHTML={ { __html: file } } />
         </div>
         <div className="card__back">
           BACK { name }

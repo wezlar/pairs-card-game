@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+
+import Card from './Card';
 
 class Game extends Component {
   render () {
     return (
-      <p>Game</p>
+      <div>
+        <p>Game</p>
+        { this.props.cards.map((card, i) => <Card key={ i } card={ card } />) }
+      </div>
     );
   }
 };
