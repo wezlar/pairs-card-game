@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 class Game extends Component {
-  render() {
+  render () {
     return (
       <p>Game</p>
     );
