@@ -6,10 +6,12 @@ import { browserHistory } from 'react-router';
 import rootReducer from './reducers/index';
 
 import cards from './data/cards';
+import game from './data/game';
 
 //create an object for the default data
 const defaultState = {
     cards,
+    game,
 };
 
 const store = createStore(rootReducer, defaultState);
