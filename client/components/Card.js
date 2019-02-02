@@ -18,6 +18,7 @@ const CardBody = styled.div`
   box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
   transform-style: preserve-3d;
   transition: transform .3s ease-in-out;
+  border-radius: 7px;
 `;
 
 const CardBack = styled.div`
@@ -26,7 +27,14 @@ const CardBack = styled.div`
   height: 100%;
   z-index: 2;
   backface-visibility: hidden;
-  background: #333;
+  background-color:#fff;
+  background-image: radial-gradient(closest-side, transparent 98%, red 99%),
+    radial-gradient(closest-side, transparent 98%, black 99%);
+  background-size:5vmin 5vmin;
+  background-position:0 0, 2.5vmin 2.5vmin;
+  border:solid 2.5vmin #fff;
+  border-radius: 7px;
+  /* overflow: hidden; */
 `;
 
 const CardFront = styled.div`
@@ -35,6 +43,7 @@ const CardFront = styled.div`
   height: 100%;
   transition-delay: .15s;
   z-index: 0;
+  border-radius: 7px;
 `;
 
 const SVGWrapper = styled.div`
@@ -47,8 +56,11 @@ const SVGWrapper = styled.div`
 class Card extends Component {
   render () {
     const { 
-      card: { image, name }, 
-      isFlipped 
+      card: { 
+        image, 
+        name,
+        isFlipped,
+      }, 
     } = this.props;
 
     const file = require(`../${image}`);
@@ -56,8 +68,9 @@ class Card extends Component {
     const flippedStyle = isFlipped ? { transform: 'rotateY(-180deg)' } : {};
     const flippedFrontStyle = isFlipped ? { transform: 'rotateY(180deg)' } : {};
 
+    // TODO: add hover state that slightly moves the card in opposite direction
     return (
-      <CardWrapper>
+      <CardWrapper onClick={this.props.onClick}>
         <CardBody style={flippedStyle}>
           <CardBack className="card__back">
             BACK { name }
@@ -73,12 +86,11 @@ class Card extends Component {
 
 Card.propTypes = {
   card: PropTypes.object,
-  isFlipped: PropTypes.bool,
+  onClick: PropTypes.func,
 }
 
 Card.defaultProps = {
   card: {},
-  isFlipped: false,
 }
 
 export default Card;
