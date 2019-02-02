@@ -1,7 +1,7 @@
 const game = {
   score: 0,
   numberOfCards: 16,
-  cards: [],
+  deck: [],
 };
 
 export default game;
