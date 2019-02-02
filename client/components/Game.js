@@ -21,6 +21,7 @@ class Game extends Component {
 
     // select the random cards
     for (let i = 0; i < halfNumberOfCards; i++) {
+      // TODO: check that card has not already been selected
       const index = Math.floor((Math.random() * cards.length));
       indexes.push(index);
     }
@@ -36,21 +37,34 @@ class Game extends Component {
     for (let i = 0; i < numberOfCards; i++) {
       const random = Math.floor((Math.random() * cardDeck.length));
 
-      shuffledDeck.push(cards[cardDeck[random]]);
+      const selectedCard = {
+        ...cards[cardDeck[random]],
+        isFlipped: false,
+      }
+      shuffledDeck.push(selectedCard);
       cardDeck.splice(random, 1);
     }
 
     // return deck
-    return shuffledDeck;
+    this.props.addNewDeck(shuffledDeck);
+  }
 
+  componentDidMount () {
+    this.startNewGame();
+  }
+  
+  cardFlip (index) {
+    this.props.cardFlip(index);
   }
   
   render () {
-    const deck = this.startNewGame();
+    const { deck } = this.props.game;
+
+
     return (
       <div>
         <DeckWrapper>
-          { deck.map((card, i) => <Card key={ i } card={ card } />) }
+          {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
       </div>
     );
