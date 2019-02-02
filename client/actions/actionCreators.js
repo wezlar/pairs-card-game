@@ -1,26 +1,14 @@
 // increment
-export function increment(index) {
+export function cardFlip(index) {
     return {
-        type: 'INCREMENT_LIKES',
+        type: 'CARD_FLIP',
         index
     };
 }
 
-// add comment
-export function addComment(postId, author, comment) {
+export function addNewDeck(deck) {
     return {
-        type: 'ADD_COMMENT',
-        postId,
-        author,
-        comment
-    }
-}
-
-// remove comment
-export function removeComment(postId, i) {
-    return {
-        type: 'REMOVE_COMMENT',
-        i,
-        postId,
+        type: 'ADD_NEW_DECK',
+        deck
     }
 }

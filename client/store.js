@@ -14,7 +14,12 @@ const defaultState = {
     game,
 };
 
-const store = createStore(rootReducer, defaultState);
+// tell redux dev tools about our store (video 19)
+const enhancers = compose(
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+);
+
+const store = createStore(rootReducer, defaultState, enhancers);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
