@@ -6,6 +6,13 @@ export function cardFlip(index) {
     };
 }
 
+export function cardMatched(index) {
+    return {
+        type: 'CARD_MATCHED',
+        index
+    };
+}
+
 export function addNewDeck(deck) {
     return {
         type: 'ADD_NEW_DECK',
@@ -13,9 +20,12 @@ export function addNewDeck(deck) {
     }
 }
 
-export function updateLastCard(card) {
+export function updateLastCard(index, name) {
     return {
         type: 'CARD_SELECTED',
-        payload: card
+        payload: {
+            index,
+            name,
+        }
     };
 }

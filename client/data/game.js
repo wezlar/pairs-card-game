@@ -1,8 +1,11 @@
 const game = {
   score: 0,
-  numberOfCards: 16,
+  numberOfCards: 18,
   deck: [],
-  lastCardSelected: '',
+  lastCardSelected: {
+    index: null,
+    name: '',
+  },
 };
 
 export default game;
