@@ -12,3 +12,10 @@ export function addNewDeck(deck) {
         deck
     }
 }
+
+export function updateLastCard(card) {
+    return {
+        type: 'CARD_SELECTED',
+        payload: card
+    };
+}

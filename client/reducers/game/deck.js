@@ -14,14 +14,6 @@ export default function deck (state = {}, action) {
       ];
 
     case 'CARD_FLIP':
-      console.log('CARD_FLIP');
-      console.log(state)
-      console.log('new state ')
-      console.log([
-        ...state.slice(0, action.index),
-        flipCard(state[action.index]),
-        ...state.slice(action.index + 1)
-      ]);
       return [
         ...state.slice(0, action.index),
         flipCard(state[action.index]),
