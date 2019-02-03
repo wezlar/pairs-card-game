@@ -72,9 +72,7 @@ class Card extends Component {
     return (
       <CardWrapper onClick={this.props.onClick}>
         <CardBody style={flippedStyle}>
-          <CardBack className="card__back">
-            BACK { name }
-          </CardBack>
+          <CardBack className="card__back" />
           <CardFront className="card__face" style={flippedFrontStyle}>
             <SVGWrapper dangerouslySetInnerHTML={ { __html: file } } />
           </CardFront>
