@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
+import Score from './Score';
 
 const DeckWrapper = styled.div`
   position: relative;
@@ -97,6 +98,7 @@ class Game extends Component {
 
     return (
       <div>
+        <Score />
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>

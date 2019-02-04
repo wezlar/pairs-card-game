@@ -5,8 +5,14 @@ export function Score (props = {}) {
   const { score } = props
 
   return (
-    <div className="score">
-      {score}
+    <div>
+      <div className="score">
+        <span class="label">Score: </span>
+        <span class="score">{score}</span>
+      </div>
+      <div className="start-new-game">
+        <button>New Game</button>
+      </div>
     </div>
   )
 }
