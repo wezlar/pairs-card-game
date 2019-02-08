@@ -7,8 +7,8 @@ export function Score (props = {}) {
   return (
     <div>
       <div className="score">
-        <span class="label">Score: </span>
-        <span class="score">{score}</span>
+        <span className="label">Score: </span>
+        <span className="score">{score}</span>
       </div>
       <div className="start-new-game">
         <button>New Game</button>

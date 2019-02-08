@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
+import Options from './Options';
 
 import newGame from '../utils/newGame';
 
@@ -72,6 +73,7 @@ class Game extends Component {
 
     return (
       <div>
+        <Options />
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
