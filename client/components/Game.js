@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
-import Score from './Score';
+
+import newGame from '../utils/newGame';
 
 const DeckWrapper = styled.div`
   position: relative;
@@ -19,44 +20,16 @@ class Game extends Component {
     super(props);
     this.returnState = null;
   }
-  startNewGame () {
-    const { game: { numberOfCards }, cards } = this.props;
-    const halfNumberOfCards = numberOfCards / 2;
-    const indexes = [];
-
-    // select the random cards
-    for (let i = 0; i < halfNumberOfCards; i++) {
-      // TODO: check that card has not already been selected
-      const index = Math.floor((Math.random() * cards.length));
-      indexes.push(index);
-    }
-
-    // create pairs
-    const cardDeck = [
-      ...indexes,
-      ...indexes,
-    ];
-
-    // randomise order
-    const shuffledDeck = [];
-    for (let i = 0; i < numberOfCards; i++) {
-      const random = Math.floor((Math.random() * cardDeck.length));
-
-      const selectedCard = {
-        ...cards[cardDeck[random]],
-        isFlipped: false,
-        hasMatched: false,
-      }
-      shuffledDeck.push(selectedCard);
-      cardDeck.splice(random, 1);
-    }
-
-    // return deck
-    this.props.addNewDeck(shuffledDeck);
-  }
 
   componentDidMount () {
     this.startNewGame();
+  }
+
+  startNewGame () {
+    const { game: { numberOfCards }, cards } = this.props;
+
+    const newDeck = newGame(cards, numberOfCards);
+    this.props.addNewDeck(newDeck);
   }
   
   cardFlip (index) {
@@ -81,6 +54,7 @@ class Game extends Component {
     if (lastCardSelected.name === deck[index].name) {
       this.props.cardMatched(index);
       this.props.cardMatched(lastCardSelected.index);
+      this.props.updateCardsMatched(2);
     } else {
       this.returnState = setInterval(() =>{
         clearInterval(this.returnState);
@@ -98,7 +72,6 @@ class Game extends Component {
 
     return (
       <div>
-        <Score />
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
