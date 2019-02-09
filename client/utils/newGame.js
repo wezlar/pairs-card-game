@@ -2,8 +2,10 @@ function selectRandomCards (cards, numberOfCards) {
   const indexes = [];
   
   for (let i = 0; i < numberOfCards; i++) {
-    // TODO: check that card has not already been selected
-    const index = Math.floor((Math.random() * cards.length));
+    let index;
+    do {
+      index = Math.floor((Math.random() * cards.length));
+    } while (indexes.includes(index));
     indexes.push(index);
   }
 
