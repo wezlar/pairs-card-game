@@ -1,7 +1,7 @@
 export default function numberOfCards(state = 16, action) {
   switch (action.type) {
-    case 'NUMBER_OF_CARDS_UPDATE':
-      return action.payload;
+    case 'UPDATE_NUMBER_OF_CARDS':
+      return action.numberOfCards;
     default:
       return state;
   }

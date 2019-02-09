@@ -29,3 +29,24 @@ export function updateLastCard(index, name) {
         }
     };
 }
+
+export function updateScore(score) {
+    return {
+        type: 'UPDATE_SCORE',
+        score
+    };
+}
+
+export function updateNumberOfCards(numberOfCards) {
+    return {
+        type: 'UPDATE_NUMBER_OF_CARDS',
+        numberOfCards
+    };
+}
+
+export function updateCardsMatched(cardsMatched) {
+    return {
+        type: 'CARDS_MATCHED',
+        cardsMatched
+    };
+}
