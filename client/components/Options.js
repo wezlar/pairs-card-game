@@ -1,11 +1,11 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
-export function Score (props = {}) {
+export function Options (props = {}) {
   const { score } = props
 
   return (
-    <div>
+    <div className="options">
       <div className="score">
         <span className="label">Score: </span>
         <span className="score">{score}</span>
@@ -17,8 +17,8 @@ export function Score (props = {}) {
   )
 }
 
-Score.propTypes = {
+Options.propTypes = {
   score: PropTypes.number,
 }
 
-export default memo(Score)
+export default memo(Options)

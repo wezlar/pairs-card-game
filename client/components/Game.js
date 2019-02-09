@@ -31,11 +31,14 @@ class Game extends Component {
 
     const newDeck = newGame(cards, numberOfCards);
     this.props.addNewDeck(newDeck);
+
   }
   
   cardFlip (index) {
     const { deck, lastCardSelected } = this.props.game;
     const { isFlipped } = deck[index];
+
+    this.props.updateScore(1);
 
     if (isFlipped) {
       // I decided that I don't want people unflipping cards
@@ -69,11 +72,11 @@ class Game extends Component {
   }
   
   render () {
-    const { deck } = this.props.game;
+    const { deck, score } = this.props.game;
 
     return (
       <div>
-        <Options />
+        <Options score={score} />
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
