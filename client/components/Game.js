@@ -72,11 +72,13 @@ class Game extends Component {
   }
   
   render () {
-    const { deck, score } = this.props.game;
+    const { deck, score, numberOfCards, cardsMatched } = this.props.game;
 
     return (
       <div>
-        <Options score={score} />
+        <Options 
+          isGameComplete={numberOfCards === cardsMatched}
+          score={score} />
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
