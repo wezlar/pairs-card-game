@@ -28,12 +28,19 @@ class Game extends Component {
   }
 
   startNewGame () {
-    const { game: { numberOfCards }, cards } = this.props;
+    const { game: { numberOfCards, deck }, cards } = this.props;
 
-    console.log('Start new game function called');
+    // loop through current deck and set flip to false so
+    // new deck does not show before render
+    deck.forEach((element, i) => {
+      if (element.isFlipped) {
+        console.log('Flipping ' + i)
+        this.props.cardFlip(i);
+      }
+    });
+
     const newDeck = newGame(cards, numberOfCards);
     this.props.addNewDeck(newDeck);
-
   }
   
   cardFlip (index) {
