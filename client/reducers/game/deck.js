@@ -16,7 +16,6 @@ export default function deck (state = {}, action) {
   switch (action.type) {
     case 'ADD_NEW_DECK':
       return [
-        ...state,
         ...action.deck,
       ];
 

@@ -20,6 +20,7 @@ class Game extends Component {
   constructor (props) {
     super(props);
     this.returnState = null;
+    this.startNewGame = this.startNewGame.bind(this);
   }
 
   componentDidMount () {
@@ -29,6 +30,7 @@ class Game extends Component {
   startNewGame () {
     const { game: { numberOfCards }, cards } = this.props;
 
+    console.log('Start new game function called');
     const newDeck = newGame(cards, numberOfCards);
     this.props.addNewDeck(newDeck);
 
@@ -78,7 +80,8 @@ class Game extends Component {
       <div>
         <Options 
           isGameComplete={numberOfCards === cardsMatched}
-          score={score} />
+          score={score} 
+          startNewGame={this.startNewGame} />
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
