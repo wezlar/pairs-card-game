@@ -1,28 +1,29 @@
-// increment
+import ACTION_TYPES from './constants'
+
 export function cardFlip(index) {
     return {
-        type: 'CARD_FLIP',
+        type: ACTION_TYPES.CARD_FLIP,
         index
     };
 }
 
 export function cardMatched(index) {
     return {
-        type: 'CARD_MATCHED',
+        type: ACTION_TYPES.CARD_MATCHED,
         index
     };
 }
 
 export function addNewDeck(deck) {
     return {
-        type: 'ADD_NEW_DECK',
+        type: ACTION_TYPES.ADD_NEW_DECK,
         deck
     }
 }
 
 export function updateLastCard(index, name) {
     return {
-        type: 'CARD_SELECTED',
+        type: ACTION_TYPES.CARD_SELECTED,
         payload: {
             index,
             name,
@@ -32,21 +33,21 @@ export function updateLastCard(index, name) {
 
 export function updateScore(score) {
     return {
-        type: 'UPDATE_SCORE',
+        type: ACTION_TYPES.UPDATE_SCORE,
         score
     };
 }
 
 export function updateNumberOfCards(numberOfCards) {
     return {
-        type: 'UPDATE_NUMBER_OF_CARDS',
+        type: ACTION_TYPES.UPDATE_NUMBER_OF_CARDS,
         numberOfCards
     };
 }
 
 export function updateCardsMatched(cardsMatched) {
     return {
-        type: 'CARDS_MATCHED',
+        type: ACTION_TYPES.CARDS_MATCHED,
         cardsMatched
     };
 }
