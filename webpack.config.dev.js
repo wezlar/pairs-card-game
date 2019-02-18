@@ -14,15 +14,15 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
   ],
   module: {
-    loaders: [
+    rules: [
       // js
       {
         test: /\.js$/,
         loaders: ['babel'],
-        include: path.join(__dirname, 'client')
+        include: path.join(__dirname, 'client'),
+        exclude: /node_modules/,
       },
       // CSS
       { 
