@@ -28,9 +28,15 @@ module.exports = {
         test: /\.(css|styl)$/,
         include: path.join(__dirname, 'client'),
         use: [
-          'style-loader', // creates style nodes from JS strings
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader' // compiles Stylus to CSS        ]
+          {
+            loader: 'style-loader' // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader' // translates CSS into CommonJS
+          },
+          {
+            loader: 'stylus-loader' // compiles Stylus to CSS
+          }
         ]
       },
       {

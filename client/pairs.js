@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 // import css
-import './styles/styles.sass';
+import css from './styles/style.styl';
 
 // import components
 import App from './components/App';
