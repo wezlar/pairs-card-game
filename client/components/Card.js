@@ -62,7 +62,7 @@ class Card extends Component {
       }, 
     } = this.props;
 
-    const file = require(`../${image}`);
+    const file = require(`!!raw-loader!../${image}`);
 
     const flippedStyle = isFlipped ? { transform: 'rotateY(-180deg)' } : {};
     const flippedFrontStyle = isFlipped ? { transform: 'rotateY(180deg)' } : {};
