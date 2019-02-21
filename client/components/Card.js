@@ -55,7 +55,7 @@ const SVGWrapper = styled.div`
 class Card extends Component {
   render () {
     const { 
-      card: { 
+      card: {
         image, 
         isFlipped,
         hasMatched,
