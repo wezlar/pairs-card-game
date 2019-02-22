@@ -11,6 +11,7 @@ const DeckWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 20px;
 `;
 
 class Game extends Component {
@@ -60,7 +61,7 @@ class Game extends Component {
     const { deck } = this.props.game;
 
     return (
-      <div>
+      <div class="game-wrapper">
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>

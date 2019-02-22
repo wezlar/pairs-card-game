@@ -36,7 +36,7 @@ class Main extends Component {
 
     return (
       <div>
-        <div className="header">
+        <header>
           <h1>
             <Link to="/">Pairs</Link>
           </h1>
@@ -44,7 +44,7 @@ class Main extends Component {
             isGameComplete={numberOfCards === cardsMatched}
             score={score} 
             startNewGame={this.startNewGame} />
-        </div>
+        </header>
         { React.cloneElement(this.props.children, this.props) }
       </div>
     );

@@ -2,9 +2,21 @@
 @import '_typography.styl'
 @import '_animations.styl'
 
+*
+  box-sizing  border-box
+
 body
   background #eff5f5
   
+header {
+  position absolute
+  width 250px
+  background rgba(100,100,100,0.1)
+  text-align center
+  padding 15px
+  height 100%
+}
+
 .options
   text-align center
   margin-bottom 2rem
@@ -16,3 +28,7 @@ body
   .game-complete
     font-size 3rem
     color red
+
+.game-wrapper {
+  margin-left 250px
+}
