@@ -55,14 +55,14 @@ const SVGWrapper = styled.div`
 class Card extends Component {
   render () {
     const { 
-      card: { 
+      card: {
         image, 
         isFlipped,
         hasMatched,
       }, 
     } = this.props;
 
-    const file = require(`../${image}`);
+    const file = require(`!!raw-loader!../${image}`);
 
     const flippedStyle = isFlipped ? { transform: 'rotateY(-180deg)' } : {};
     const flippedFrontStyle = isFlipped ? { transform: 'rotateY(180deg)' } : {};
