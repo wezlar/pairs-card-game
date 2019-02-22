@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import Card from './Card';
 
-import newGame from '../utils/newGame';
-
 const DeckWrapper = styled.div`
   position: relative;
   max-width: 1000px;
@@ -25,13 +23,13 @@ class Game extends Component {
     const { deck, lastCardSelected } = this.props.game;
     const { isFlipped } = deck[index];
 
-    this.props.updateScore(1);
-
     if (isFlipped) {
       // I decided that I don't want people unflipping cards
       return;
     } 
 
+    this.props.updateScore(1);
+    
     // flip card
     this.props.cardFlip(index);
     
@@ -59,7 +57,7 @@ class Game extends Component {
   }
   
   render () {
-    const { deck, score, numberOfCards, cardsMatched } = this.props.game;
+    const { deck } = this.props.game;
 
     return (
       <div>
