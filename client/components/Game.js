@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
-import Options from './Options';
-
-import newGame from '../utils/newGame';
 
 const DeckWrapper = styled.div`
   position: relative;
@@ -14,46 +11,26 @@ const DeckWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 20px;
 `;
 
 class Game extends Component {
   constructor (props) {
     super(props);
     this.returnState = null;
-    this.startNewGame = this.startNewGame.bind(this);
-  }
-
-  componentDidMount () {
-    this.startNewGame();
-  }
-
-  startNewGame () {
-    const { game: { numberOfCards, deck }, cards } = this.props;
-
-    // loop through current deck and set flip to false so
-    // new deck does not show before render
-    deck.forEach((element, i) => {
-      if (element.isFlipped) {
-        console.log('Flipping ' + i)
-        this.props.cardFlip(i);
-      }
-    });
-
-    const newDeck = newGame(cards, numberOfCards);
-    this.props.addNewDeck(newDeck);
   }
   
   cardFlip (index) {
     const { deck, lastCardSelected } = this.props.game;
     const { isFlipped } = deck[index];
 
-    this.props.updateScore(1);
-
     if (isFlipped) {
       // I decided that I don't want people unflipping cards
       return;
     } 
 
+    this.props.updateScore(1);
+    
     // flip card
     this.props.cardFlip(index);
     
@@ -81,14 +58,10 @@ class Game extends Component {
   }
   
   render () {
-    const { deck, score, numberOfCards, cardsMatched } = this.props.game;
+    const { deck } = this.props.game;
 
     return (
-      <div>
-        <Options 
-          isGameComplete={numberOfCards === cardsMatched}
-          score={score} 
-          startNewGame={this.startNewGame} />
+      <div class="game-wrapper">
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
