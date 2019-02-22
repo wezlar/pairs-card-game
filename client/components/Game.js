@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Card from './Card';
-import Options from './Options';
 
 import newGame from '../utils/newGame';
 
@@ -20,27 +19,6 @@ class Game extends Component {
   constructor (props) {
     super(props);
     this.returnState = null;
-    this.startNewGame = this.startNewGame.bind(this);
-  }
-
-  componentDidMount () {
-    this.startNewGame();
-  }
-
-  startNewGame () {
-    const { game: { numberOfCards, deck }, cards } = this.props;
-
-    // loop through current deck and set flip to false so
-    // new deck does not show before render
-    deck.forEach((element, i) => {
-      if (element.isFlipped) {
-        console.log('Flipping ' + i)
-        this.props.cardFlip(i);
-      }
-    });
-
-    const newDeck = newGame(cards, numberOfCards);
-    this.props.addNewDeck(newDeck);
   }
   
   cardFlip (index) {
@@ -85,10 +63,6 @@ class Game extends Component {
 
     return (
       <div>
-        <Options 
-          isGameComplete={numberOfCards === cardsMatched}
-          score={score} 
-          startNewGame={this.startNewGame} />
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
