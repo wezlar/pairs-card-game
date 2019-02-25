@@ -1,4 +1,4 @@
-import ACTION_TYPES from '../../actions/constants'
+import ACTION_TYPES from '../../actions/constants';
 
 export default function numberOfCards(state = 16, action) {
   switch (action.type) {

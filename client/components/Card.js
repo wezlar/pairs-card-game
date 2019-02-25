@@ -87,10 +87,10 @@ class Card extends Component {
 Card.propTypes = {
   card: PropTypes.object,
   onClick: PropTypes.func,
-}
+};
 
 Card.defaultProps = {
   card: {},
-}
+};
 
 export default Card;

@@ -1,4 +1,4 @@
-import ACTION_TYPES from './constants'
+import ACTION_TYPES from './constants';
 
 export function cardFlip(index) {
     return {
@@ -18,7 +18,7 @@ export function addNewDeck(deck) {
     return {
         type: ACTION_TYPES.ADD_NEW_DECK,
         deck
-    }
+    };
 }
 
 export function updateLastCard(index, name) {

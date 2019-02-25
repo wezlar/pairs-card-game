@@ -7,7 +7,7 @@ function mapStateToProps (state) {
     return {
         cards: state.cards,
         game: state.game,
-    }
+    };
 }
 
 function mapDispatchToProps (dispatch) {

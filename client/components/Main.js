@@ -22,7 +22,7 @@ class Main extends Component {
     // new deck does not show before render
     deck.forEach((element, i) => {
       if (element.isFlipped) {
-        console.log('Flipping ' + i)
+        console.log('Flipping ' + i);
         this.props.cardFlip(i);
       }
     });

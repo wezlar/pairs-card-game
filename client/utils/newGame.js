@@ -24,7 +24,7 @@ function shuffleCards (cards, deck) {
       ...cards[deck[random]],
       isFlipped: false,
       hasMatched: false,
-    }
+    };
 
     shuffledDeck.push(selectedCard);
     deck.splice(random, 1);

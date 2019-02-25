@@ -1,17 +1,17 @@
-import ACTION_TYPES from '../../actions/constants'
+import ACTION_TYPES from '../../actions/constants';
 
 function flipCard(state) {
   return {
     ...state,
     isFlipped: !state.isFlipped,
-  }
+  };
 }
 
 function hasMatched(state) {
   return {
     ...state,
     hasMatched: !state.hasMatched,
-  }
+  };
 }
 
 export default function deck (state = {}, action) {

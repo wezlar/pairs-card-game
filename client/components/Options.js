@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export function Options (props = {}) {
-  const { score, isGameComplete, startNewGame } = props
+  const { score, isGameComplete, startNewGame } = props;
 
   return (
     <div className="options">
@@ -18,11 +18,11 @@ export function Options (props = {}) {
         <button onClick={startNewGame}>New Game</button>
       </div>
     </div>
-  )
+  );
 }
 
 Options.propTypes = {
   score: PropTypes.number,
-}
+};
 
-export default Options
+export default Options;
