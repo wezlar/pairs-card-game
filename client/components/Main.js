@@ -9,10 +9,15 @@ class Main extends Component {
   constructor (props) {
     super(props);
     this.startNewGame = this.startNewGame.bind(this);
+    this.startGameTimeout = null;
   }
 
   componentDidMount () {
     this.startNewGame();
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.startGameTimeout);
   }
 
   startNewGame () {
@@ -22,13 +27,15 @@ class Main extends Component {
     // new deck does not show before render
     deck.forEach((element, i) => {
       if (element.isFlipped) {
-        console.log('Flipping ' + i);
         this.props.cardFlip(i);
       }
     });
 
-    const newDeck = newGame(cards, numberOfCards);
-    this.props.addNewDeck(newDeck);
+    this.startGameTimeout = setTimeout(() => {
+      const newDeck = newGame(cards, numberOfCards);
+      this.props.addNewDeck(newDeck);
+      clearTimeout(this.startGameTimeout);
+    }, 500);
   }
   
   render () {
