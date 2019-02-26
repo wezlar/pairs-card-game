@@ -61,7 +61,7 @@ class Game extends Component {
     const { deck } = this.props.game;
 
     return (
-      <div class="game-wrapper">
+      <div className="game-wrapper">
         <DeckWrapper>
           {deck.map((card, i) => <Card key={ i } card={ card } onClick={() => this.cardFlip(i)} />) }
         </DeckWrapper>
