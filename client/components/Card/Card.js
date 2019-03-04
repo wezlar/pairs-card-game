@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -56,44 +56,50 @@ const SVGWrapper = styled.div`
   }
 `;
 
-class Card extends Component {
-  render () {
-    const { 
-      card: {
-        image, 
-        isFlipped,
-        hasMatched,
-      }, 
-    } = this.props;
+export function Card (props = {}) {
+  const { 
+    card: {
+      image, 
+      isFlipped,
+      hasMatched,
+    },
+    onClick,
+  } = props;
 
-    const file = require(`!!raw-loader!../${image}`);
+  const file = require(`!!raw-loader!../../${image}`);
 
-    const flippedStyle = isFlipped 
-      ? { transform: 'rotateY(-180deg)' } 
+  const flippedStyle = isFlipped 
+    ? { transform: 'rotateY(-180deg)' } 
+    : {};
+  
+  const flippedFrontStyle = isFlipped 
+      ? { transform: 'rotateY(180deg)' } 
       : {};
-    
-    const flippedFrontStyle = isFlipped 
-        ? { transform: 'rotateY(180deg)' } 
-        : {};
-        
-    const hasMatchedStyle = hasMatched 
-      ? { boxShadow: '0 0 1px 2px #099f09' } 
-      : { boxShadow: '0 0 1px 2px #00000000' };
+      
+  const hasMatchedStyle = hasMatched 
+    ? { boxShadow: '0 0 1px 2px #099f09' } 
+    : { boxShadow: '0 0 1px 2px #00000000' };
 
-    const cardFrontStyle = Object.assign({}, flippedFrontStyle, hasMatchedStyle);
+  const cardFrontStyle = Object.assign({}, flippedFrontStyle, hasMatchedStyle);
 
-    // TODO: add hover state that slightly moves the card in opposite direction
-    return (
-      <CardWrapper onClick={this.props.onClick}>
-        <CardBody style={flippedStyle}>
-          <CardBack className="card__back" />
-          <CardFront className="card__face" style={cardFrontStyle}>
-            <SVGWrapper dangerouslySetInnerHTML={ { __html: file } } />
-          </CardFront>
-        </CardBody>
-      </CardWrapper>
-    );
-  }
+  const cardFront = () =>
+    <CardFront className="card__face" style={cardFrontStyle}>
+      <SVGWrapper dangerouslySetInnerHTML={ { __html: file } } />
+    </CardFront>;
+  
+  const cardBack = () => 
+    <CardBack className="card__back" />;
+
+  const cardBody = () => 
+    <CardBody style={flippedStyle}>
+      {cardBack()}
+      {cardFront()}
+    </CardBody>;
+
+  // TODO: add hover state that slightly moves the card in opposite direction
+  return <CardWrapper onClick={onClick}>
+      {cardBody()}
+    </CardWrapper>;
 };
 
 Card.propTypes = {
@@ -105,4 +111,4 @@ Card.defaultProps = {
   card: {},
 };
 
-export default Card;
+export default memo(Card);
