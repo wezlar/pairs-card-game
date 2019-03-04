@@ -5,7 +5,8 @@
   "scripts": {
     "build:webpack": "NODE_ENV=production webpack",
     "build": "npm run clean && npm run build:webpack",
-    "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:@babel/register",
+    "test": "NODE_ENV=test jest --watch",
+    "test-win": "SET NODE_ENV=test&& jest --watch",
     "clean": "rimraf dist",
     "start": "webpack-dev-server --open",
     "webpack": "webpack",
@@ -62,6 +63,20 @@
     "stylus-loader": "^3.0.2",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "jest": "^24.1.0",
+    "enzyme-to-json": "^3.3.4"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "transform": {
+      ".*": "babel-jest",
+      "^.+\\.js?$": "babel-jest"
+    }
   }
 }
