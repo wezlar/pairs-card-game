@@ -13,7 +13,7 @@
   },
   "rules": {
     "semi": [2, "always"],
-    "quotes": [2, "single"],
+    "quotes": [2, "single", "backtick"],
     "strict": [2, "never"],
     "generator-star-spacing": 1,
     "babel/new-cap": 1,

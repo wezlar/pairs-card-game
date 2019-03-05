@@ -1,7 +1,7 @@
 import { Card as Component } from './Card';
 
-describe('<Card />', () => {
-  test('That 1 = 1', () => {
+describe(`<Card />`, () => {
+  test(`it doesn't blow up` , () => {
     expect(1).toBe(1);
   });
 });
