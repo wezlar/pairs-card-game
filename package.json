@@ -54,9 +54,12 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "css-loader": "^0.23.1",
+    "enzyme-to-json": "^3.3.4",
     "expect": "^1.18.0",
     "expect-jsx": "^2.5.1",
     "file-loader": "^3.0.1",
+    "jest": "^24.1.0",
+    "jest-raw-loader": "^1.0.1",
     "mocha": "^6.0.0",
     "node-sass": "^4.11.0",
     "react-addons-test-utils": "^15.0.2",
@@ -65,9 +68,7 @@
     "stylus-loader": "^3.0.2",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14",
-    "jest": "^24.1.0",
-    "enzyme-to-json": "^3.3.4"
+    "webpack-dev-server": "^3.1.14"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -79,6 +80,9 @@
     "transform": {
       ".*": "babel-jest",
       "^.+\\.js?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|svg|ttf|css)$": "<rootDir>/testHelpers/assetsTransformer.js"
     }
   }
 }
