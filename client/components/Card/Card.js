@@ -66,7 +66,9 @@ export function Card (props = {}) {
     onClick,
   } = props;
 
-  const file = require(`!!raw-loader!../../${image}`);
+  const file = image 
+    ? require(`!!raw-loader!../../${image}`)
+    : '';
 
   const flippedStyle = isFlipped 
     ? { transform: 'rotateY(-180deg)' } 
@@ -83,7 +85,7 @@ export function Card (props = {}) {
   const cardFrontStyle = Object.assign({}, flippedFrontStyle, hasMatchedStyle);
 
   const cardFront = () =>
-    <CardFront className="card__face" style={cardFrontStyle}>
+    <CardFront className="card__front" style={cardFrontStyle}>
       <SVGWrapper dangerouslySetInnerHTML={ { __html: file } } />
     </CardFront>;
   
@@ -91,13 +93,13 @@ export function Card (props = {}) {
     <CardBack className="card__back" />;
 
   const cardBody = () => 
-    <CardBody style={flippedStyle}>
+    <CardBody className="card__body" style={flippedStyle}>
       {cardBack()}
       {cardFront()}
     </CardBody>;
 
   // TODO: add hover state that slightly moves the card in opposite direction
-  return <CardWrapper onClick={onClick}>
+  return <CardWrapper className="card__wrapper" onClick={onClick}>
       {cardBody()}
     </CardWrapper>;
 };
