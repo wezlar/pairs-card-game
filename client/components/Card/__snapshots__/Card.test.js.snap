@@ -1,16 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> renders correctly flipped 1`] = `
-"<styled.div className=\\"card__wrapper\\" onClick={[Function: mockConstructor]}>
-  <styled.div className=\\"card__body\\" style={{...}}>
-    <styled.div className=\\"card__back\\" />
-    <styled.div className=\\"card__front\\" style={{...}}>
-      <styled.div dangerouslySetInnerHTML={{...}} />
-    </styled.div>
-  </styled.div>
-</styled.div>"
-`;
-
 exports[`<Card /> renders correctly unflipped 1`] = `
 "<styled.div className=\\"card__wrapper\\" onClick={[Function: mockConstructor]}>
   <styled.div className=\\"card__body\\" style={{...}}>

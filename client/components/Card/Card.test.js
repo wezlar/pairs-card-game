@@ -32,5 +32,7 @@ describe(`<Card />`, () => {
     expect(mockOnClick).not.toHaveBeenCalled();
     card.find('.card__wrapper').simulate('click');
     expect(mockOnClick).toHaveBeenCalled();
+    card.find('.card__wrapper').simulate('click');
+    expect(mockOnClick).toHaveBeenCalledTimes(2);
   })
 });
