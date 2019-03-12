@@ -11,9 +11,9 @@ const mockCard = {
 }
 
 describe(`<Card />`, () => {
-  test(`it doesn't blow up` , () => {
-    const tree = shallow(<Component />)
-    expect(tree.length).toEqual(1)
+  test(`It doesn't blow up` , () => {
+    const tree = shallow(<Component />);
+    expect(tree.length).toEqual(1);
   });
 
   const mockOnClick = jest.fn();
@@ -22,12 +22,12 @@ describe(`<Card />`, () => {
     onClick: mockOnClick,
   };
 
-  test(`renders correctly unflipped`, () => {
+  test(`Renders correctly unflipped`, () => {
     const card = shallow(<Component { ...props } />);
     expect(card.debug()).toMatchSnapshot();
-  })
+  });
 
-  test(`click is triggered`, () => {
+  test(`Click is triggered`, () => {
     const card = shallow(<Component { ...props }  />);
     expect(mockOnClick).not.toHaveBeenCalled();
     card.find('.card__wrapper').simulate('click');
