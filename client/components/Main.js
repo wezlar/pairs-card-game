@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import Options from './Options';
+import Options from './Options/Options';
 
 import newGame from '../utils/newGame';
 

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> Renders correctly 1`] = `
+"<div className=\\"options\\">
+  <div className=\\"score\\">
+    <span className=\\"label\\">
+      Score: 
+    </span>
+    <span className=\\"score\\">
+      10
+    </span>
+  </div>
+  <div className=\\"start-new-game\\">
+    <button className=\\"start-new-game__button\\" onClick={[Function: mockConstructor]}>
+      New Game
+    </button>
+  </div>
+</div>"
+`;
