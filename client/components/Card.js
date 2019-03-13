@@ -2,22 +2,25 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const cardWidth = '138px';
-const cardHeight = '200px';
+const cardWidth = 138;
+const cardHeight = 200;
 
 const CardWrapper = styled.div`
   position: relative;
-  width: ${cardWidth};
-  height: ${cardHeight};
-  margin-right: 10px;
-  margin-bottom: 10px;
+  width: ${cardWidth + 10}px;
+  height: ${cardHeight + 10}px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
   perspective: 800px;
+  overflow: hidden;
 `;
 
 const CardBody = styled.div`
   position: absolute;
-  width: ${cardWidth};
-  height: ${cardHeight};
+  width: ${cardWidth}px;
+  height: ${cardHeight}px;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
   transform-style: preserve-3d;
   transition: transform .3s ease-in-out;
@@ -27,8 +30,8 @@ const CardBody = styled.div`
 
 const CardBack = styled.div`
   position: absolute;
-  width: ${cardWidth};
-  height: ${cardHeight};
+  width: ${cardWidth}px;
+  height: ${cardHeight}px;
   z-index: 2;
   backface-visibility: hidden;
   background-color:#fff;
@@ -42,8 +45,8 @@ const CardBack = styled.div`
 
 const CardFront = styled.div`
   position: absolute;
-  width: ${cardWidth};
-  height: ${cardHeight};
+  width: ${cardWidth}px;
+  height: ${cardHeight}px;
   transition-delay: .15s;
   z-index: 0;
   border-radius: 5px;
@@ -51,8 +54,8 @@ const CardFront = styled.div`
 
 const SVGWrapper = styled.div`
   svg {
-    width: ${cardWidth};
-    height: ${cardHeight};
+    width: ${cardWidth}px;
+    height: ${cardHeight}px;
   }
 `;
 
