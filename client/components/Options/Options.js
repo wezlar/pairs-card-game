@@ -12,7 +12,7 @@ export function Options (props = {}) {
       }
       <div className="score">
         <span className="label">Score: </span>
-        <span className="score">{score}</span>
+        <span className="score-value">{score}</span>
       </div>
       <div className="start-new-game">
         <button className="start-new-game__button" onClick={startNewGame}>New Game</button>

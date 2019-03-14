@@ -15,8 +15,13 @@ describe(`<Card />`, () => {
     startNewGame: mockOnClick,
   };
 
-  test(`Renders correctly`, () => {
+  test(`Renders normal view correctly`, () => {
     const options = shallow(<Component { ...props } />);
+    expect(options.debug()).toMatchSnapshot();
+  });
+
+  test(`Renders finish view correctly`, () => {
+    const options = shallow(<Component { ...props } isGameComplete={true} />);
     expect(options.debug()).toMatchSnapshot();
   });
 
@@ -27,5 +32,12 @@ describe(`<Card />`, () => {
     expect(mockOnClick).toHaveBeenCalled();
     options.find('.start-new-game__button').simulate('click');
     expect(mockOnClick).toHaveBeenCalledTimes(2);
-  })
+  });
+
+  test(`Check display values match`, () => {
+    const options = shallow(<Component { ...props } />);
+    expect(options.find('.score-value').text()).toBe('10');
+    options.setProps({ score: 20 });
+    expect(options.find('.score-value').text()).toBe('20');
+  });
 })

@@ -1,12 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Card /> Renders correctly 1`] = `
+exports[`<Card /> Renders finish view correctly 1`] = `
+"<div className=\\"options\\">
+  <div className=\\"game-complete\\">
+    Yay! All cards matched!
+  </div>
+  <div className=\\"score\\">
+    <span className=\\"label\\">
+      Score: 
+    </span>
+    <span className=\\"score-value\\">
+      10
+    </span>
+  </div>
+  <div className=\\"start-new-game\\">
+    <button className=\\"start-new-game__button\\" onClick={[Function: mockConstructor]}>
+      New Game
+    </button>
+  </div>
+</div>"
+`;
+
+exports[`<Card /> Renders normal view correctly 1`] = `
 "<div className=\\"options\\">
   <div className=\\"score\\">
     <span className=\\"label\\">
       Score: 
     </span>
-    <span className=\\"score\\">
+    <span className=\\"score-value\\">
       10
     </span>
   </div>
