@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import Options from './Options/Options';
 
-import newGame from '../utils/newGame';
+import newGame from '../utils/newGame/newGame';
 
 class Main extends Component {
   constructor (props) {
