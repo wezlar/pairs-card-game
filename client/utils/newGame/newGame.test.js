@@ -13,6 +13,12 @@ describe(`newGame util`, () => {
 
     newDeck = newGame(cards, 20);
     expect(newDeck.length).toBe(20);
+
+    newDeck = newGame(cards, 0);
+    expect(newDeck.length).toBe(0);
+
+    newDeck = newGame({}, 20);
+    expect(newDeck.length).toBe(0);
   });
 
   test(`Test card has extra fields set`, () => {
