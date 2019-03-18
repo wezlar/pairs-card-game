@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import Options from './Options/Options';
+import Options from '../Options/Options';
 
-import newGame from '../utils/newGame/newGame';
+import newGame from '../../utils/newGame/newGame';
 
 class Main extends Component {
   constructor (props) {
@@ -39,7 +39,7 @@ class Main extends Component {
   }
   
   render () {
-    const { deck, score, numberOfCards, cardsMatched } = this.props.game;
+    const { score, numberOfCards, cardsMatched } = this.props.game;
 
     return (
       <div>
