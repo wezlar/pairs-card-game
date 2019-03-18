@@ -63,6 +63,7 @@
     "mocha": "^6.0.0",
     "node-sass": "^4.11.0",
     "react-addons-test-utils": "^15.0.2",
+    "redux-mock-store": "^1.5.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "stylus-loader": "^3.0.2",
@@ -82,7 +83,8 @@
       "^.+\\.js?$": "babel-jest"
     },
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|svg|ttf|css)$": "<rootDir>/testHelpers/assetsTransformer.js"
+      "\\.(jpg|jpeg|png|gif|svg|ttf|css)$": "<rootDir>/testHelpers/assetsTransformer.js",
+      "@jest-helpers(.*)$": "<rootDir>/testHelpers/$1"
     }
   }
 }
