@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> Renders correctly 1`] = `
+"<Main game={{...}}>
+  <div>
+    <header>
+      <h1>
+        <Link to=\\"/\\" onlyActiveOnIndex={false} style={{...}}>
+          <a style={{...}} onClick={[Function: bound handleClick]}>
+            Pairs
+          </a>
+        </Link>
+      </h1>
+      <Options isGameComplete={false} score={0} startNewGame={[Function: bound startNewGame]}>
+        <div className=\\"options\\">
+          <div className=\\"score\\">
+            <span className=\\"label\\">
+              Score: 
+            </span>
+            <span className=\\"score-value\\">
+              0
+            </span>
+          </div>
+          <div className=\\"start-new-game\\">
+            <button className=\\"start-new-game__button\\" onClick={[Function: bound startNewGame]}>
+              New Game
+            </button>
+          </div>
+        </div>
+      </Options>
+    </header>
+    <MockSimpleChild game={{...}}>
+      <div className=\\"\\" />
+    </MockSimpleChild>
+  </div>
+</Main>"
+`;
