@@ -1,4 +1,3 @@
-import ACTION_TYPES from './constants';
 import {
   cardFlip,
   cardMatched,
@@ -12,12 +11,6 @@ import {
 import mockDeck from '../../testHelpers/__mocks__/mockDeck';
 
 describe(`actionCreators.js`, () => {
-  describe(`ACTION_TYPES`, () => {
-    test(`it matches the snapshot`, () => {
-      expect(ACTION_TYPES).toMatchSnapshot();
-    });
-  });
-
   describe(`actions`, () => {
     test(`cardFlip()`, () => {
       const payload = 1;
