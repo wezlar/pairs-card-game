@@ -6,7 +6,7 @@ import css from './styles/style.styl';
 
 // import components
 import App from './components/App';
-import Game from './components/Game';
+import Game from './components/Game/Game';
 
 // use if not using router
 // render(<Main />, document.getElementById('root'));
