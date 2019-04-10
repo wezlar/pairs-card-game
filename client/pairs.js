@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import css from './styles/style.styl';
 
 // import components
-import App from './components/App';
+import App from './components/App/App';
 import Game from './components/Game/Game';
 
 // use if not using router
