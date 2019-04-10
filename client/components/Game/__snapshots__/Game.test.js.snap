@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Game /> Renders correctly 1`] = `
+"<div className=\\"game-wrapper\\">
+  <styled.div>
+    <Component card={{...}} onClick={[Function: onClick]} />
+    <Component card={{...}} onClick={[Function: onClick]} />
+    <Component card={{...}} onClick={[Function: onClick]} />
+    <Component card={{...}} onClick={[Function: onClick]} />
+    <Component card={{...}} onClick={[Function: onClick]} />
+    <Component card={{...}} onClick={[Function: onClick]} />
+  </styled.div>
+</div>"
+`;
