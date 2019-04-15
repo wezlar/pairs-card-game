@@ -48,7 +48,7 @@ class Main extends Component {
             <Link to="/">Pairs</Link>
           </h1>
           <Options 
-            isGameComplete={numberOfCards === cardsMatched}
+            isGameComplete={numberOfCards === cardsMatched.cardsMatched}
             score={score} 
             startNewGame={this.startNewGame} />
         </header>

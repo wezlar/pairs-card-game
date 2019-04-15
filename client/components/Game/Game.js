@@ -45,6 +45,7 @@ class Game extends Component {
       this.props.cardMatched(index);
       this.props.cardMatched(lastCardSelected.index);
       this.props.updateCardsMatched(2);
+      console.log('updateCardsMatched');
     } else {
       this.returnState = setInterval(() =>{
         clearInterval(this.returnState);

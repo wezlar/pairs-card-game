@@ -48,6 +48,8 @@ export function updateNumberOfCards(numberOfCards) {
 export function updateCardsMatched(cardsMatched) {
     return {
         type: ACTION_TYPES.CARDS_MATCHED,
-        cardsMatched
+        payload: {
+            cardsMatched
+        }
     };
 }

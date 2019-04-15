@@ -1,9 +1,18 @@
 import ACTION_TYPES from '../../actions/constants';
 
-export default function cardsMatched(state = 0, action) {
-  switch (action.type) {
+const initialState = {
+  cardsMatched: 0
+};
+
+export const getInitialState = () => (initialState);
+
+export default (state = getInitialState(), { type, payload } = {}) => {
+  switch (type) {
     case ACTION_TYPES.CARDS_MATCHED:
-      return state + action.cardsMatched;
+      return {
+        ...state,
+        cardsMatched: state.cardsMatched + payload.cardsMatched,
+      };
     default:
       return state;
   }
