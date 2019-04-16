@@ -25,7 +25,7 @@ describe(`cardsMatched.js reducer`, () => {
     test(`status is correct for ${ACTION_TYPES.CARDS_MATCHED}`, () => {
       const payload = { cardsMatched: 10 };
       const action = actionCreator(ACTION_TYPES.CARDS_MATCHED)(payload)
-      expect(reducer(undefined, action)).toEqual({ ...initialState, ...payload })
+      expect(reducer(undefined, action)).toEqual(payload.cardsMatched);
     });
   });
 });
