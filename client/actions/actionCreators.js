@@ -47,7 +47,9 @@ export function updateScore(score) {
 export function updateNumberOfCards(numberOfCards) {
     return {
         type: ACTION_TYPES.UPDATE_NUMBER_OF_CARDS,
-        numberOfCards
+        payload: {
+            numberOfCards,
+        },
     };
 }
 

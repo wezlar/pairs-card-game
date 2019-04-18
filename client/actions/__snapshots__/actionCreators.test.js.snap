@@ -91,7 +91,9 @@ Object {
 
 exports[`actionCreators.js actions updateNumberOfCards() 1`] = `
 Object {
-  "numberOfCards": 20,
+  "payload": Object {
+    "numberOfCards": 20,
+  },
   "type": "UPDATE_NUMBER_OF_CARDS",
 }
 `;
