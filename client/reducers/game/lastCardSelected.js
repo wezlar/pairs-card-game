@@ -1,10 +1,17 @@
 import ACTION_TYPES from '../../actions/constants';
 
-export default function lastCardSelected(state = '', action) {
-  switch (action.type) {
+const initialState = {
+  index: null,
+  name: '',
+};
+
+export const getInitialState = () => (initialState);
+
+export default (state = getInitialState(), { type, payload } = {}) => {
+  switch (type) {
     case ACTION_TYPES.CARD_SELECTED:
       return {
-        ...action.payload
+        ...payload
       };
     default:
       return state;
