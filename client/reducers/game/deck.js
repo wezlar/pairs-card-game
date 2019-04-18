@@ -1,5 +1,9 @@
 import ACTION_TYPES from '../../actions/constants';
 
+const initialState = [];
+
+export const getInitialState = () => (initialState);
+
 function flipCard(state) {
   return {
     ...state,
@@ -14,25 +18,25 @@ function hasMatched(state) {
   };
 }
 
-export default function deck (state = {}, action) {
-  switch (action.type) {
+export default function deck (state = getInitialState(), { type, payload } = {}) {
+  switch (type) {
     case ACTION_TYPES.ADD_NEW_DECK:
       return [
-        ...action.deck,
+        ...payload.deck,
       ];
 
     case ACTION_TYPES.CARD_FLIP:
       return [
-        ...state.slice(0, action.index),
-        flipCard(state[action.index]),
-        ...state.slice(action.index + 1)
+        ...state.slice(0, payload.index),
+        flipCard(state[payload.index]),
+        ...state.slice(payload.index + 1)
       ];
 
     case ACTION_TYPES.CARD_MATCHED:
       return [
-        ...state.slice(0, action.index),
-        hasMatched(state[action.index]),
-        ...state.slice(action.index + 1)
+        ...state.slice(0, payload.index),
+        hasMatched(state[payload.index]),
+        ...state.slice(payload.index + 1)
       ];
     
     default:
