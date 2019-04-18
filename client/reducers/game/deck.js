@@ -18,7 +18,7 @@ function hasMatched(state) {
   };
 }
 
-export default function deck (state = getInitialState(), { type, payload } = {}) {
+export default (state = getInitialState(), { type, payload } = {}) => {
   switch (type) {
     case ACTION_TYPES.ADD_NEW_DECK:
       return [
