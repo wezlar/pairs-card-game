@@ -1,6 +1,6 @@
 const game = {
   score: 0,
-  numberOfCards: 18,
+  numberOfCards: 16,
   cardsMatched: 0,
   deck: [],
   lastCardSelected: {
