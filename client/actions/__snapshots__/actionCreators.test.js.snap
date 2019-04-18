@@ -2,64 +2,70 @@
 
 exports[`actionCreators.js actions addNewDeck() 1`] = `
 Object {
-  "deck": Array [
-    Object {
-      "cardIndex": 0,
-      "hasMatched": false,
-      "image": "images/svg-cards/2_of_hearts.svg",
-      "isFlipped": false,
-      "name": "2 of hearts",
-    },
-    Object {
-      "cardIndex": 1,
-      "hasMatched": false,
-      "image": "images/svg-cards/3_of_hearts.svg",
-      "isFlipped": false,
-      "name": "3 of hearts",
-    },
-    Object {
-      "cardIndex": 2,
-      "hasMatched": false,
-      "image": "images/svg-cards/4_of_hearts.svg",
-      "isFlipped": false,
-      "name": "4 of hearts",
-    },
-    Object {
-      "cardIndex": 0,
-      "hasMatched": false,
-      "image": "images/svg-cards/2_of_hearts.svg",
-      "isFlipped": false,
-      "name": "2 of hearts",
-    },
-    Object {
-      "cardIndex": 1,
-      "hasMatched": false,
-      "image": "images/svg-cards/3_of_hearts.svg",
-      "isFlipped": false,
-      "name": "3 of hearts",
-    },
-    Object {
-      "cardIndex": 2,
-      "hasMatched": false,
-      "image": "images/svg-cards/4_of_hearts.svg",
-      "isFlipped": false,
-      "name": "4 of hearts",
-    },
-  ],
+  "payload": Object {
+    "deck": Array [
+      Object {
+        "cardIndex": 0,
+        "hasMatched": false,
+        "image": "images/svg-cards/2_of_hearts.svg",
+        "isFlipped": false,
+        "name": "2 of hearts",
+      },
+      Object {
+        "cardIndex": 1,
+        "hasMatched": false,
+        "image": "images/svg-cards/3_of_hearts.svg",
+        "isFlipped": false,
+        "name": "3 of hearts",
+      },
+      Object {
+        "cardIndex": 2,
+        "hasMatched": false,
+        "image": "images/svg-cards/4_of_hearts.svg",
+        "isFlipped": false,
+        "name": "4 of hearts",
+      },
+      Object {
+        "cardIndex": 0,
+        "hasMatched": false,
+        "image": "images/svg-cards/2_of_hearts.svg",
+        "isFlipped": false,
+        "name": "2 of hearts",
+      },
+      Object {
+        "cardIndex": 1,
+        "hasMatched": false,
+        "image": "images/svg-cards/3_of_hearts.svg",
+        "isFlipped": false,
+        "name": "3 of hearts",
+      },
+      Object {
+        "cardIndex": 2,
+        "hasMatched": false,
+        "image": "images/svg-cards/4_of_hearts.svg",
+        "isFlipped": false,
+        "name": "4 of hearts",
+      },
+    ],
+  },
   "type": "ADD_NEW_DECK",
 }
 `;
 
 exports[`actionCreators.js actions cardFlip() 1`] = `
 Object {
-  "index": 1,
+  "payload": Object {
+    "index": 1,
+  },
   "type": "CARD_FLIP",
 }
 `;
 
 exports[`actionCreators.js actions cardMatched() 1`] = `
 Object {
-  "index": 1,
+  "payload": Object {
+    "index": 1,
+  },
   "type": "CARD_MATCHED",
 }
 `;
