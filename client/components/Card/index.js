@@ -69,17 +69,9 @@ export function Card (props = {}) {
     onClick,
   } = props;
 
-  const file = image 
-    ? require(`!!raw-loader!../../${image}`)
-    : '';
-
-  const flippedStyle = isFlipped 
-    ? { transform: 'rotateY(-180deg)' } 
-    : {};
-  
-  const flippedFrontStyle = isFlipped 
-      ? { transform: 'rotateY(180deg)' } 
-      : {};
+  const file = image ? require(`!!raw-loader!../../${image}`) : '';
+  const flippedStyle = isFlipped ? { transform: 'rotateY(-180deg)' } : {};
+  const flippedFrontStyle = isFlipped ? { transform: 'rotateY(180deg)' } : {};
       
   const hasMatchedStyle = hasMatched 
     ? { boxShadow: '0 0 1px 2px #099f09' } 
