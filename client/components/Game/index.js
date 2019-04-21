@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Card from './Card';
+import Card from '../Card';
 
 const DeckWrapper = styled.div`
   position: relative;

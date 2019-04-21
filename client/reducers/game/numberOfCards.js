@@ -1,9 +1,13 @@
 import ACTION_TYPES from '../../actions/constants';
 
-export default function numberOfCards(state = 16, action) {
-  switch (action.type) {
+const initialState = 16;
+
+export const getInitialState = () => (initialState);
+
+export default (state = getInitialState(), { type, payload } = {}) => {
+  switch (type) {
     case ACTION_TYPES.UPDATE_NUMBER_OF_CARDS:
-      return action.numberOfCards;
+      return payload.numberOfCards;
     default:
       return state;
   }

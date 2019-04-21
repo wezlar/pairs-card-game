@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`score.js reducer initial state it matches the snapshot - default 1`] = `0`;

@@ -9,7 +9,7 @@ import cards from './data/cards';
 import game from './data/game';
 
 //create an object for the default data
-const defaultState = {
+export const defaultState = {
     cards,
     game,
 };

@@ -34,7 +34,13 @@ function shuffleCards (cards, deck) {
 }
 
 export default function newGame (cards, numberOfCards) {
+  //check everythings valis
+  if (typeof cards === undefined || !cards.length) {
+    return [];
+  }
+
   // select the random cards
+  numberOfCards += numberOfCards % 2; // cannot be odd number
   const indexes = selectRandomCards(cards, (numberOfCards / 2));
   
   // create pairs

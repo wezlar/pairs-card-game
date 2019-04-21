@@ -12,10 +12,10 @@ export function Options (props = {}) {
       }
       <div className="score">
         <span className="label">Score: </span>
-        <span className="score">{score}</span>
+        <span className="score-value">{score}</span>
       </div>
       <div className="start-new-game">
-        <button onClick={startNewGame}>New Game</button>
+        <button className="start-new-game__button" onClick={startNewGame}>New Game</button>
       </div>
     </div>
   );
@@ -23,6 +23,8 @@ export function Options (props = {}) {
 
 Options.propTypes = {
   score: PropTypes.number,
+  isGameComplete: PropTypes.bool,
+  startNewGame: PropTypes.func,
 };
 
 export default Options;

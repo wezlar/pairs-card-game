@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actionCreators.js ACTION_TYPES it matches the snapshot 1`] = `
+Object {
+  "ADD_NEW_DECK": "ADD_NEW_DECK",
+  "CARDS_MATCHED": "CARDS_MATCHED",
+  "CARD_FLIP": "CARD_FLIP",
+  "CARD_MATCHED": "CARD_MATCHED",
+  "CARD_SELECTED": "CARD_SELECTED",
+  "UPDATE_NUMBER_OF_CARDS": "UPDATE_NUMBER_OF_CARDS",
+  "UPDATE_SCORE": "UPDATE_SCORE",
+}
+`;

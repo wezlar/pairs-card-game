@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actionCreators.js actions addNewDeck() 1`] = `
+Object {
+  "payload": Object {
+    "deck": Array [
+      Object {
+        "cardIndex": 0,
+        "hasMatched": false,
+        "image": "images/svg-cards/2_of_hearts.svg",
+        "isFlipped": false,
+        "name": "2 of hearts",
+      },
+      Object {
+        "cardIndex": 1,
+        "hasMatched": false,
+        "image": "images/svg-cards/3_of_hearts.svg",
+        "isFlipped": false,
+        "name": "3 of hearts",
+      },
+      Object {
+        "cardIndex": 2,
+        "hasMatched": false,
+        "image": "images/svg-cards/4_of_hearts.svg",
+        "isFlipped": false,
+        "name": "4 of hearts",
+      },
+      Object {
+        "cardIndex": 0,
+        "hasMatched": false,
+        "image": "images/svg-cards/2_of_hearts.svg",
+        "isFlipped": false,
+        "name": "2 of hearts",
+      },
+      Object {
+        "cardIndex": 1,
+        "hasMatched": false,
+        "image": "images/svg-cards/3_of_hearts.svg",
+        "isFlipped": false,
+        "name": "3 of hearts",
+      },
+      Object {
+        "cardIndex": 2,
+        "hasMatched": false,
+        "image": "images/svg-cards/4_of_hearts.svg",
+        "isFlipped": false,
+        "name": "4 of hearts",
+      },
+    ],
+  },
+  "type": "ADD_NEW_DECK",
+}
+`;
+
+exports[`actionCreators.js actions cardFlip() 1`] = `
+Object {
+  "payload": Object {
+    "index": 1,
+  },
+  "type": "CARD_FLIP",
+}
+`;
+
+exports[`actionCreators.js actions cardMatched() 1`] = `
+Object {
+  "payload": Object {
+    "index": 1,
+  },
+  "type": "CARD_MATCHED",
+}
+`;
+
+exports[`actionCreators.js actions updateCardsMatched() 1`] = `
+Object {
+  "payload": Object {
+    "cardsMatched": 4,
+  },
+  "type": "CARDS_MATCHED",
+}
+`;
+
+exports[`actionCreators.js actions updateLastCard() 1`] = `
+Object {
+  "payload": Object {
+    "index": 1,
+    "name": "2 of hearts",
+  },
+  "type": "CARD_SELECTED",
+}
+`;
+
+exports[`actionCreators.js actions updateNumberOfCards() 1`] = `
+Object {
+  "payload": Object {
+    "numberOfCards": 20,
+  },
+  "type": "UPDATE_NUMBER_OF_CARDS",
+}
+`;
+
+exports[`actionCreators.js actions updateScore() 1`] = `
+Object {
+  "payload": Object {
+    "score": 10,
+  },
+  "type": "UPDATE_SCORE",
+}
+`;
