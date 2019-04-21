@@ -40,7 +40,9 @@ export function updateLastCard(index, name) {
 export function updateScore(score) {
     return {
         type: ACTION_TYPES.UPDATE_SCORE,
-        score
+        payload: {
+            score,
+        },
     };
 }
 

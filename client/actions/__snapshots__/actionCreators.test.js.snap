@@ -100,7 +100,9 @@ Object {
 
 exports[`actionCreators.js actions updateScore() 1`] = `
 Object {
-  "score": 10,
+  "payload": Object {
+    "score": 10,
+  },
   "type": "UPDATE_SCORE",
 }
 `;

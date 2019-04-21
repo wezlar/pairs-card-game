@@ -1,9 +1,14 @@
 import ACTION_TYPES from '../../actions/constants';
 
-export default function score(state = 0, action) {
-  switch (action.type) {
+const initialState = 0;
+
+export const getInitialState = () => (initialState);
+
+export default (state = getInitialState(), { type, payload } = {}) => {
+  switch (type) {
     case ACTION_TYPES.UPDATE_SCORE:
-      return state + action.score;
+      console.log('here ' + (state + payload.score))
+      return state + payload.score;
     default:
       return state;
   }
