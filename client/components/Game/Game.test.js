@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Component from './Game';
+import Component from './index';
 
 import mockDeck from '../../../testHelpers/__mocks__/mockDeck';
 

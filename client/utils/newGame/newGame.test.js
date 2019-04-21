@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import newGame from './newGame';
+import newGame from './index';
 import cards from '../../data/cards'
 
 describe(`newGame util`, () => {

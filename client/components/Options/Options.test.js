@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Options as Component } from './Options';
+import { Options as Component } from './index';
 
 describe(`<Card />`, () => {
   test(`It doesn't blow up`, () => {

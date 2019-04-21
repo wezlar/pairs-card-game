@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { MockSimpleChild } from '@jest-helpers/components';
 import mockDeck from '../../../testHelpers/__mocks__/mockDeck';
-import Component from './Main';
+import Component from './index';
 
 const mockProps = {
   game: {

@@ -5,8 +5,8 @@ import { render } from 'react-dom';
 import css from './styles/style.styl';
 
 // import components
-import App from './components/App/App';
-import Game from './components/Game/Game';
+import App from './components/App';
+import Game from './components/Game';
 
 // use if not using router
 // render(<Main />, document.getElementById('root'));

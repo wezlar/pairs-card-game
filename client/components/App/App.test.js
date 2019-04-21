@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import { defaultState } from '../../store';
 
-import Component from './App';
+import Component from './index';
 
 // const mountComponent = (state) => mount(<Component />, state);
 

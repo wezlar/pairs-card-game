@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Card as Component } from './Card';
+import { Card as Component } from './index';
 
 const mockCard = {
   cardIndex: 0,
