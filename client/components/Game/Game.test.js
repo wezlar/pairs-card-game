@@ -10,13 +10,13 @@ const mockProps = {
   },
 };
 
-describe(`<Game />`, () => {
-  test(`It doesn't blow up` , () => {
+describe('<Game />', () => {
+  test('It doesn\'t blow up' , () => {
     const tree = shallow(<Component {...mockProps} />);
     expect(tree.length).toEqual(1);
   });
 
-  test(`Renders correctly`, () => {
+  test('Renders correctly', () => {
     const main = shallow(<Component {...mockProps} />);
     expect(main.debug()).toMatchSnapshot();
   });

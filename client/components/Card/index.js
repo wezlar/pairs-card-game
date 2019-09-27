@@ -80,21 +80,21 @@ export function Card (props = {}) {
   const cardFrontStyle = Object.assign({}, flippedFrontStyle, hasMatchedStyle);
 
   const cardFront = () =>
-    <CardFront className="card__front" style={cardFrontStyle}>
-      <SVGWrapper dangerouslySetInnerHTML={ { __html: file } } />
+    <CardFront className='card__front' style={cardFrontStyle}>
+      <SVGWrapper dangerouslySetInnerHTML={{ __html: file }} />
     </CardFront>;
   
   const cardBack = () => 
-    <CardBack className="card__back" />;
+    <CardBack className='card__back' />;
 
   const cardBody = () => 
-    <CardBody className="card__body" style={flippedStyle}>
+    <CardBody className='card__body' style={flippedStyle}>
       {cardBack()}
       {cardFront()}
     </CardBody>;
 
   // TODO: add hover state that slightly moves the card in opposite direction
-  return <CardWrapper className="card__wrapper" onClick={onClick}>
+  return <CardWrapper className='card__wrapper' onClick={onClick}>
       {cardBody()}
     </CardWrapper>;
 };

@@ -8,6 +8,7 @@
     "test": "NODE_ENV=test jest --watch",
     "test-win": "SET NODE_ENV=test&& jest --watch",
     "test-coverage": "NODE_ENV=test jest --coverage",
+    "lint": "./node_modules/.bin/eslint --ext js,jsx ./",
     "clean": "rimraf dist",
     "start": "webpack-dev-server --open",
     "webpack": "webpack",

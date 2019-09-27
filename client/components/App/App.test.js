@@ -7,11 +7,11 @@ import Component from './index';
 
 // const mountComponent = (state) => mount(<Component />, state);
 
-describe(`<App />`, () => {
-  test(`it doesnt blow up`, () => {
+describe('<App />', () => {
+  test('it doesnt blow up', () => {
     const tree = ''; // mountComponent({ defaultState, config: {} })
     // console.log(tree.debug())
-    expect(tree.length).toEqual(0)
+    expect(tree.length).toEqual(0);
   });
 });
 

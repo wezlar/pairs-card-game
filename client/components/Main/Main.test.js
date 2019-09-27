@@ -13,13 +13,13 @@ const mockProps = {
   },
 };
 
-describe(`<Main />`, () => {
-  test(`It doesn't blow up` , () => {
+describe('<Main />', () => {
+  test('It doesn\'t blow up' , () => {
     const tree = mount(<Component {...mockProps}><MockSimpleChild /></Component>);
     expect(tree.length).toEqual(1);
   });
 
-  test(`Renders correctly`, () => {
+  test('Renders correctly', () => {
     const main = mount(<Component {...mockProps}><MockSimpleChild /></Component>);
     expect(main.debug()).toMatchSnapshot();
   });

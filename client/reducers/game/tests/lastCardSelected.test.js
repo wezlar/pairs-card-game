@@ -5,7 +5,7 @@ import reducer, { getInitialState } from '../lastCardSelected';
 
 import mockDeck from '../../../../testHelpers/__mocks__/mockDeck';
 
-describe(`lastCardSelected.js reducer`, () => {
+describe('lastCardSelected.js reducer', () => {
   const initialState = getInitialState();
 
   describe('initial state', () => {
@@ -14,19 +14,19 @@ describe(`lastCardSelected.js reducer`, () => {
     });
   });
 
-  describe(`the reducer`, () => {
+  describe('the reducer', () => {
     test('it returns initial state by default', () => {
-      expect(reducer(undefined, {})).toEqual(initialState)
+      expect(reducer(undefined, {})).toEqual(initialState);
     });
     
-    test(`it doesn't change state unexpectedly`, () => {
+    test('it doesn\'t change state unexpectedly', () => {
       const fakeAction = actionCreator('NOT_A_REAL_ACTION_TYPE')('test-payload');
-      expect(reducer(undefined, fakeAction)).toEqual(initialState)
+      expect(reducer(undefined, fakeAction)).toEqual(initialState);
     });
 
     test(`status is correct for ${ACTION_TYPES.CARD_SELECTED}`, () => {
       const payload = { index: 5, name: 'TEST CARD' };
-      const action = actionCreator(ACTION_TYPES.CARD_SELECTED)(payload)
+      const action = actionCreator(ACTION_TYPES.CARD_SELECTED)(payload);
       expect(reducer(undefined, action)).toEqual({ ...initialState, ...payload });
     });
   });

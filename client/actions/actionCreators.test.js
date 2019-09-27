@@ -10,35 +10,35 @@ import {
 
 import mockDeck from '../../testHelpers/__mocks__/mockDeck';
 
-describe(`actionCreators.js`, () => {
-  describe(`actions`, () => {
-    test(`cardFlip()`, () => {
+describe('actionCreators.js', () => {
+  describe('actions', () => {
+    test('cardFlip()', () => {
       const payload = 1;
       expect(cardFlip(payload)).toMatchSnapshot();
     });
 
-    test(`cardMatched()`, () => {
+    test('cardMatched()', () => {
       const payload = 1;
       expect(cardMatched(payload)).toMatchSnapshot();
     });
 
-    test(`addNewDeck()`, () => {
+    test('addNewDeck()', () => {
       expect(addNewDeck(mockDeck)).toMatchSnapshot();
     });
 
-    test(`updateLastCard()`, () => {
+    test('updateLastCard()', () => {
       expect(updateLastCard(1, '2 of hearts')).toMatchSnapshot();
     });
 
-    test(`updateScore()`, () => {
+    test('updateScore()', () => {
       expect(updateScore(10)).toMatchSnapshot();
     });
 
-    test(`updateNumberOfCards()`, () => {
+    test('updateNumberOfCards()', () => {
       expect(updateNumberOfCards(20)).toMatchSnapshot();
     });
     
-    test(`updateCardsMatched()`, () => {
+    test('updateCardsMatched()', () => {
       expect(updateCardsMatched(4)).toMatchSnapshot();
     });
   });

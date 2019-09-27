@@ -45,7 +45,7 @@ class Main extends Component {
       <div>
         <header>
           <h1>
-            <Link to="/">Pairs</Link>
+            <Link to='/'>Pairs</Link>
           </h1>
           <Options 
             isGameComplete={numberOfCards === cardsMatched}

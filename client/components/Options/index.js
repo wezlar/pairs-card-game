@@ -5,17 +5,17 @@ export function Options (props = {}) {
   const { score, isGameComplete, startNewGame } = props;
 
   return (
-    <div className="options">
-      { isGameComplete && <div className="game-complete">
+    <div className='options'>
+      { isGameComplete && <div className='game-complete'>
           Yay! All cards matched!
         </div>
       }
-      <div className="score">
-        <span className="label">Score: </span>
-        <span className="score-value">{score}</span>
+      <div className='score'>
+        <span className='label'>Score: </span>
+        <span className='score-value'>{score}</span>
       </div>
-      <div className="start-new-game">
-        <button className="start-new-game__button" onClick={startNewGame}>New Game</button>
+      <div className='start-new-game'>
+        <button className='start-new-game__button' onClick={startNewGame}>New Game</button>
       </div>
     </div>
   );

@@ -17,6 +17,6 @@ const actionCreator = (type) => (payload, meta = {}) => ({
   type,
   payload,
   meta,
-})
+});
 
-export default actionCreator
+export default actionCreator;
