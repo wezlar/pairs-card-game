@@ -69,6 +69,9 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|svg|ttf|css)$": "<rootDir>/testHelpers/assetsTransformer.js",
       "@jest-helpers(.*)$": "<rootDir>/testHelpers/$1"
-    }
+    },
+    "collectCoverageFrom": [
+      "**/client/**/*.js"
+    ]
   }
 }
