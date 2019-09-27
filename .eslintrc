@@ -3,7 +3,8 @@
     "browser": true,
     "node": true,
     "mocha": true,
-    "jest": true
+    "jest": true,
+    "cypress/globals": true
   },
   "parser": "babel-eslint",
   "settings": {
@@ -40,6 +41,7 @@
   },
   "plugins": [
     "babel",
-    "react"
+    "react",
+    "eslint-plugin-cypress"
   ]
 }
