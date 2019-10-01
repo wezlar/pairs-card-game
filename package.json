@@ -17,8 +17,10 @@
     "lint": "./node_modules/.bin/eslint --ext js,jsx ./",
     "clean": "rimraf dist",
     "start": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --open",
     "webpack": "webpack",
-    "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos"
+    "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
