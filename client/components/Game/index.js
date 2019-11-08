@@ -11,7 +11,7 @@ const DeckWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
 `;
 
 class Game extends Component {

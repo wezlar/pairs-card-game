@@ -9,10 +9,7 @@ const CardWrapper = styled.div`
   position: relative;
   width: ${cardWidth + 10}px;
   height: ${cardHeight + 10}px;
-  padding-top: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
+  padding: 5px;
   perspective: 800px;
   overflow: hidden;
 `;
@@ -59,7 +56,7 @@ const SVGWrapper = styled.div`
   }
 `;
 
-export function Card (props = {}) {
+const Card = (props = {}) => {
   const { 
     card: {
       image, 
