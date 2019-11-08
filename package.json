@@ -20,7 +20,8 @@
     "dev": "webpack-dev-server --open",
     "webpack": "webpack",
     "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,8 @@
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^5.2.5",
+    "@testing-library/cypress": "^5.0.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "css-loader": "^0.23.1",
