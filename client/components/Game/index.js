@@ -24,6 +24,7 @@ class Game extends Component {
     const { deck, lastCardSelected } = this.props.game;
     const { isFlipped } = deck[index];
 
+    console.log({ index, lastCardSelected: lastCardSelected.name });
     if (isFlipped) {
       // I decided that I don't want people unflipping cards
       return;
@@ -46,8 +47,7 @@ class Game extends Component {
       this.props.cardMatched(lastCardSelected.index);
       this.props.updateCardsMatched(2);
     } else {
-      this.returnState = setInterval(() =>{
-        clearInterval(this.returnState);
+      setTimeout(() =>{
         this.props.cardFlip(lastCardSelected.index);
         this.props.cardFlip(index);
       }, 1000);

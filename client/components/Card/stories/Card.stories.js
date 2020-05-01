@@ -13,4 +13,4 @@ export default { title: 'Card' };
 
 export const cardBack = () => <Card card={cardDetails} />;
 
-export const cardFront = () => <Card card={cardDetails} />;
+export const cardFront = () => <Card card={{ ...cardDetails, isFlipped: true }} />;
