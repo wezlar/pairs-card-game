@@ -22,7 +22,7 @@ class Main extends Component {
 
   startNewGame () {
     const { game: { numberOfCards, deck }, cards } = this.props;
-
+    
     // loop through current deck and set flip to false so
     // new deck does not show before render
     deck.forEach((element, i) => {

@@ -5,12 +5,13 @@ module.exports = {
   entry: path.join(__dirname, 'client', 'pairs.js'),
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'index.bundle.js'
+    filename: 'bundle.js'
   },
   mode: process.env.NODE_ENV || 'development',
   resolve: {
     modules: [path.resolve(__dirname, 'client'), 'node_modules']
   },
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'client')
   },
@@ -54,6 +55,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: true,
       template: path.join(__dirname, 'index.html')
     })
   ]

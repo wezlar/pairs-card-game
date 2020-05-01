@@ -12,7 +12,7 @@ import Game from './components/Game';
 // render(<Main />, document.getElementById('root'));
 
 // import react router devs
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 
