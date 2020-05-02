@@ -15,7 +15,7 @@
     "test-win": "SET NODE_ENV=test&& jest --watch",
     "test-coverage": "NODE_ENV=test jest --coverage",
     "lint": "./node_modules/.bin/eslint --ext js,jsx ./",
-    "clean": "rimraf dist",
+    "clean": "rimraf build",
     "start": "webpack-dev-server --open",
     "dev": "webpack-dev-server --open",
     "webpack": "webpack",
