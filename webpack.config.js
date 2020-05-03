@@ -42,16 +42,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg|mp3)$/,
+        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
         use: [
           {
             loader: 'file-loader', 
-          },
-          {
-            loader: 'raw-loader',
           }
         ]
-      }
+      },
     ]
   },
   plugins: [

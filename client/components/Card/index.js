@@ -49,13 +49,6 @@ const CardFront = styled.div`
   border-radius: 5px;
 `;
 
-const SVGWrapper = styled.div`
-  svg {
-    width: ${cardWidth}px;
-    height: ${cardHeight}px;
-  }
-`;
-
 const Card = (props = {}) => {
   const { 
     card: {
@@ -66,7 +59,6 @@ const Card = (props = {}) => {
     onClick,
   } = props;
 
-  const file = image ? require(`!!raw-loader!../../${image}`) : '';
   const flippedStyle = isFlipped ? { transform: 'rotateY(-180deg)' } : {};
   const flippedFrontStyle = isFlipped ? { transform: 'rotateY(180deg)' } : {};
       
@@ -78,7 +70,9 @@ const Card = (props = {}) => {
 
   const cardFront = () =>
     <CardFront className='card__front' style={cardFrontStyle}>
-      <SVGWrapper dangerouslySetInnerHTML={{ __html: file }} />
+      <img src={`../../${image}`}
+        width={`${cardWidth}px`}
+        height={`${cardHeight}px`} />
     </CardFront>;
   
   const cardBack = () => 
@@ -90,7 +84,6 @@ const Card = (props = {}) => {
       {cardFront()}
     </CardBody>;
 
-  // TODO: add hover state that slightly moves the card in opposite direction
   return <CardWrapper className='card__wrapper' onClick={onClick}>
       {cardBody()}
     </CardWrapper>;
