@@ -1,218 +1,218 @@
 const cards = [
   {
-    'image': 'images/svg-cards/10_of_clubs.svg',
+    'image': '10_of_clubs',
     'name': '10 of clubs',
   },
   {
-    'image': 'images/svg-cards/10_of_diamonds.svg',
+    'image': '10_of_diamonds',
     'name': '10 of diamonds',
   },
   {
-    'image': 'images/svg-cards/10_of_hearts.svg',
+    'image': '10_of_hearts',
     'name': '10 of hearts',
   },
   {
-    'image': 'images/svg-cards/10_of_spades.svg',
+    'image': '10_of_spades',
     'name': '10 of spades',
   },
   {
-    'image': 'images/svg-cards/2_of_clubs.svg',
+    'image': '2_of_clubs',
     'name': '2 of clubs',
   },
   {
-    'image': 'images/svg-cards/2_of_diamonds.svg',
+    'image': '2_of_diamonds',
     'name': '2 of diamonds',
   },
   {
-    'image': 'images/svg-cards/2_of_hearts.svg',
+    'image': '2_of_hearts',
     'name': '2 of hearts',
   },
   {
-    'image': 'images/svg-cards/2_of_spades.svg',
+    'image': '2_of_spades',
     'name': '2 of spades',
   },
   {
-    'image': 'images/svg-cards/3_of_clubs.svg',
+    'image': '3_of_clubs',
     'name': '3 of clubs',
   },
   {
-    'image': 'images/svg-cards/3_of_diamonds.svg',
+    'image': '3_of_diamonds',
     'name': '3 of diamonds',
   },
   {
-    'image': 'images/svg-cards/3_of_hearts.svg',
+    'image': '3_of_hearts',
     'name': '3 of hearts',
   },
   {
-    'image': 'images/svg-cards/3_of_spades.svg',
+    'image': '3_of_spades',
     'name': '3 of spades',
   },
   {
-    'image': 'images/svg-cards/4_of_clubs.svg',
+    'image': '4_of_clubs',
     'name': '4 of clubs',
   },
   {
-    'image': 'images/svg-cards/4_of_diamonds.svg',
+    'image': '4_of_diamonds',
     'name': '4 of diamonds',
   },
   {
-    'image': 'images/svg-cards/4_of_hearts.svg',
+    'image': '4_of_hearts',
     'name': '4 of hearts',
   },
   {
-    'image': 'images/svg-cards/4_of_spades.svg',
+    'image': '4_of_spades',
     'name': '4 of spades',
   },
   {
-    'image': 'images/svg-cards/5_of_clubs.svg',
+    'image': '5_of_clubs',
     'name': '5 of clubs',
   },
   {
-    'image': 'images/svg-cards/5_of_diamonds.svg',
+    'image': '5_of_diamonds',
     'name': '5 of diamonds',
   },
   {
-    'image': 'images/svg-cards/5_of_hearts.svg',
+    'image': '5_of_hearts',
     'name': '5 of hearts',
   },
   {
-    'image': 'images/svg-cards/5_of_spades.svg',
+    'image': '5_of_spades',
     'name': '5 of spades',
   },
   {
-    'image': 'images/svg-cards/6_of_clubs.svg',
+    'image': '6_of_clubs',
     'name': '6 of clubs',
   },
   {
-    'image': 'images/svg-cards/6_of_diamonds.svg',
+    'image': '6_of_diamonds',
     'name': '6 of diamonds',
   },
   {
-    'image': 'images/svg-cards/6_of_hearts.svg',
+    'image': '6_of_hearts',
     'name': '6 of hearts',
   },
   {
-    'image': 'images/svg-cards/6_of_spades.svg',
+    'image': '6_of_spades',
     'name': '6 of spades',
   },
   {
-    'image': 'images/svg-cards/7_of_clubs.svg',
+    'image': '7_of_clubs',
     'name': '7 of clubs',
   },
   {
-    'image': 'images/svg-cards/7_of_diamonds.svg',
+    'image': '7_of_diamonds',
     'name': '7 of diamonds',
   },
   {
-    'image': 'images/svg-cards/7_of_hearts.svg',
+    'image': '7_of_hearts',
     'name': '7 of hearts',
   },
   {
-    'image': 'images/svg-cards/7_of_spades.svg',
+    'image': '7_of_spades',
     'name': '7 of spades',
   },
   {
-    'image': 'images/svg-cards/8_of_clubs.svg',
+    'image': '8_of_clubs',
     'name': '8 of clubs',
   },
   {
-    'image': 'images/svg-cards/8_of_diamonds.svg',
+    'image': '8_of_diamonds',
     'name': '8 of diamonds',
   },
   {
-    'image': 'images/svg-cards/8_of_hearts.svg',
+    'image': '8_of_hearts',
     'name': '8 of hearts',
   },
   {
-    'image': 'images/svg-cards/8_of_spades.svg',
+    'image': '8_of_spades',
     'name': '8 of spades',
   },
   {
-    'image': 'images/svg-cards/9_of_clubs.svg',
+    'image': '9_of_clubs',
     'name': '9 of clubs',
   },
   {
-    'image': 'images/svg-cards/9_of_diamonds.svg',
+    'image': '9_of_diamonds',
     'name': '9 of diamonds',
   },
   {
-    'image': 'images/svg-cards/9_of_hearts.svg',
+    'image': '9_of_hearts',
     'name': '9 of hearts',
   },
   {
-    'image': 'images/svg-cards/9_of_spades.svg',
+    'image': '9_of_spades',
     'name': '9 of spades',
   },
   {
-    'image': 'images/svg-cards/ace_of_clubs.svg',
+    'image': 'ace_of_clubs',
     'name': 'ace of clubs',
   },
   {
-    'image': 'images/svg-cards/ace_of_diamonds.svg',
+    'image': 'ace_of_diamonds',
     'name': 'ace of diamonds',
   },
   {
-    'image': 'images/svg-cards/ace_of_hearts.svg',
+    'image': 'ace_of_hearts',
     'name': 'ace of hearts',
   },
   {
-    'image': 'images/svg-cards/ace_of_spades.svg',
+    'image': 'ace_of_spades',
     'name': 'ace of spades',
   },
   {
-    'image': 'images/svg-cards/black_joker.svg',
+    'image': 'black_joker',
     'name': 'black joker',
   },
   {
-    'image': 'images/svg-cards/jack_of_clubs.svg',
+    'image': 'jack_of_clubs',
     'name': 'jack of clubs',
   },
   {
-    'image': 'images/svg-cards/jack_of_diamonds.svg',
+    'image': 'jack_of_diamonds',
     'name': 'jack of diamonds',
   },
   {
-    'image': 'images/svg-cards/jack_of_hearts.svg',
+    'image': 'jack_of_hearts',
     'name': 'jack of hearts',
   },
   {
-    'image': 'images/svg-cards/jack_of_spades.svg',
+    'image': 'jack_of_spades',
     'name': 'jack of spades',
   },
   {
-    'image': 'images/svg-cards/king_of_clubs.svg',
+    'image': 'king_of_clubs',
     'name': 'king of clubs',
   },
   {
-    'image': 'images/svg-cards/king_of_diamonds.svg',
+    'image': 'king_of_diamonds',
     'name': 'king of diamonds',
   },
   {
-    'image': 'images/svg-cards/king_of_hearts.svg',
+    'image': 'king_of_hearts',
     'name': 'king of hearts',
   },
   {
-    'image': 'images/svg-cards/king_of_spades.svg',
+    'image': 'king_of_spades',
     'name': 'king of spades',
   },
   {
-    'image': 'images/svg-cards/queen_of_clubs.svg',
+    'image': 'queen_of_clubs',
     'name': 'queen of clubs',
   },
   {
-    'image': 'images/svg-cards/queen_of_diamonds.svg',
+    'image': 'queen_of_diamonds',
     'name': 'queen of diamonds',
   },
   {
-    'image': 'images/svg-cards/queen_of_hearts.svg',
+    'image': 'queen_of_hearts',
     'name': 'queen of hearts',
   },
   {
-    'image': 'images/svg-cards/queen_of_spades.svg',
+    'image': 'queen_of_spades',
     'name': 'queen of spades',
   },
   {
-    'image': 'images/svg-cards/red_joker.svg',
+    'image': 'red_joker',
     'name': 'red joker',
   }
 ];
