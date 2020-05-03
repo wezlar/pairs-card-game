@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: path.join(__dirname, 'client', 'pairs.js'),
@@ -41,7 +42,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        test: /\.(jpg|jpeg|png|gif|svg|mp3)$/,
         use: [
           {
             loader: 'file-loader', 
@@ -57,6 +58,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: path.join(__dirname, 'index.html')
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ]
 };
