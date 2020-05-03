@@ -1,6 +1,7 @@
-import React, { memo } from 'react';
+import React, { memo, ReactComponent } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Cards from '../../images/svg-cards';
 
 const cardWidth = 138;
 const cardHeight = 200;
@@ -70,9 +71,7 @@ const Card = (props = {}) => {
 
   const cardFront = () =>
     <CardFront className='card__front' style={cardFrontStyle}>
-      <img src={`../../${image}`}
-        width={`${cardWidth}px`}
-        height={`${cardHeight}px`} />
+      <img src={Cards[`card_${image}`]} />
     </CardFront>;
   
   const cardBack = () => 
