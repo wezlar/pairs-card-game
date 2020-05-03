@@ -29,15 +29,9 @@ module.exports = {
         test: /\.(css|styl)$/,
         include: path.join(__dirname, 'client'),
         use: [
-          {
-            loader: 'style-loader' // creates style nodes from JS strings
-          },
-          {
-            loader: 'css-loader' // translates CSS into CommonJS
-          },
-          {
-            loader: 'stylus-loader' // compiles Stylus to CSS
-          }
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'stylus-loader', // compiles Stylus to CSS
         ]
       },
       {
@@ -45,18 +39,15 @@ module.exports = {
         use: [
           {
             loader: 'file-loader', 
-          },
-          {
-            loader: 'raw-loader',
           }
         ]
-      }
+      },
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
       template: path.join(__dirname, 'index.html')
-    })
+    }),
   ]
 };
