@@ -10,7 +10,6 @@ import Component from './index';
 describe('<App />', () => {
   test('it doesnt blow up', () => {
     const tree = ''; // mountComponent({ defaultState, config: {} })
-    // console.log(tree.debug())
     expect(tree.length).toEqual(0);
   });
 });
